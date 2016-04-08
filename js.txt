@@ -1,0 +1,19 @@
+var index=0;
+$("li").hover(function(){
+    $(this).addClass().siblings.removeClass();
+    $("img").eq($(this).index).stop(true).fadeIn(500).siblings.fadeOut(500);
+},function(){
+    
+});
+var play=setInterval(auto,1000);
+$("content").hover(function(){
+    clearInterval(play);
+},function(){
+    play=setInterval(auto,1000);
+});
+function auto(){
+index++;
+index%=6;
+$("li").eq(index).addClass().siblings.removeClass();
+$("img").eq($(this).index).stop(true).fadeIn(500).siblings.fadeOut(500);
+};
