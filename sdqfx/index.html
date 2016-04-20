@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link id="sty" rel="stylesheet" href="">
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="top">
+    <span class="logo"></span>
+    <span class="title">水电气用量异常智能分析系统</span>
+
+    <div class="user_msg">
+        <a class="userName">DOUG ADAMS
+            <span class="triangle"></span>
+        </a>
+        <span class="user_icon"></span>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="wrap"></div>
+        <div class="left">
+            <div class="menu hover" title="主页">
+                <a class="sub_icon zy_icon"> 主页</a>
+            </div>
+            <div class="submenu navbg" style="display: block">
+                <ul>
+                    <li><a href="#" title="户成员信息采集" class="users_cj" usec = "users_cj">户成员信息采集</a></li>
+                    <li><a href="#" title="水用量采集" class="w_cj" usec = "w_cj">水用量采集</a></li>
+                    <li><a href="#" title="电用量采集"  class="d_cj" usec = "d_cj">电用量采集</a></li>
+                    <li><a href="#" title="水用量采集"  class="q_cj" usec = "q_cj">气用量采集</a></li>
+                    <li><a href="#" title="户电列表器"  class="hl_cj" usec = "hl_cj">户电列表器</a></li>
+                </ul>
+                <span class="sub_tr"></span>
+            </div>
+
+
+            <div class="menu" title="数据采集">
+                <a class="sub_icon sjcj"> 数据采集</a>
+
+            </div>
+            <div class="submenu navbg">
+                <ul>
+                    <li><a href="#" title="户成员信息采集" class="users_cj" usec = "users_cj">户成员信息采集</a></li>
+                    <li><a href="#" title="水用量采集" class="w_cj" usec = "w_cj">水用量采集</a></li>
+                    <li><a href="#" title="电用量采集"  class="d_cj" usec = "d_cj">电用量采集</a></li>
+                    <li><a href="#" title="水用量采集"  class="q_cj" usec = "q_cj">气用量采集</a></li>
+                    <li><a href="#" title="户电列表器"  class="hl_cj" usec = "hl_cj">户电列表器</a></li>
+                </ul>
+                <span class="sub_tr"></span>
+            </div>
+
+            <div class="menu" title="分析研判">
+                <a class="sub_icon fxyp"> 分析研判</a>
+
+            </div>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#" title="异常用电" class="f_d" usec = "f_d">异常用电</a></li>
+                    <li><a href="#" title="异常用水"  class="f_d" usec = "f_d">异常用水</a></li>
+                    <li><a href="#" title="异常用气"  class="f_d" usec = "f_d">异常用气</a></li>
+                    <li><a href="#" title="电用户清单"  class="f_l" usec = "f_l">电用户清单</a></li>
+                    <li><a href="#" title="水用户清单"  class="f_l" usec = "f_l">水用户清单</a></li>
+                    <li><a href="#" title="气用户清单"  class="f_l" usec = "f_l">气用户清单</a></li>
+                </ul>
+                <span class="sub_tr"></span>
+            </div>
+
+            <div class="menu" title="报警预警"><a class="sub_icon yjbj">报警预警 </a></div>
+            <div class="submenu">
+                <ul>
+                    <li><a href="#" title="电异常用量预警" class="y_j" usec = "y_j">电异常用量预警</a></li>
+                    <li><a href="#" title="水异常用量预警" class="y_j" usec = "y_j">水异常用量预警</a></li>
+                    <li><a href="#" title="气异常用量预警"  class="y_j" usec = "y_j">气异常用量预警</a></li>
+                    <li><a href="#" title="电异常用量报警" class="b_j" usec = "b_j">电异常用量报警</a></li>
+                    <li><a href="#" title="水异常用量报警" class="b_j" usec = "b_j">水异常用量报警</a></li>
+                    <li><a href="#" title="气异常用量报警"  class="b_j" usec = "b_j">气异常用量报警</a></li>
+                </ul>
+                <span class="sub_tr"></span>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+                    <iframe src="charts.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+</div>
+
+</body>
+</html>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function(){
+        setWidth();
+        //显示子菜单
+        $(".menu").click(function(){
+            $(this).next("div.submenu").stop().slideToggle()
+                    .siblings(".submenu:visible").slideUp();
+            $(this).addClass("hover").siblings().removeClass("hover");
+            $(".submenu").addClass("navbg");
+        });
+
+        //点击子菜单
+        $(".submenu").on("click","li a",function(){
+            $(".submenu").find("li a").removeClass("cur");
+            $(this).addClass("cur");
+        });
+
+        $('.userName,.triangle').click(function(){
+            alert('显示用户信息');
+        });
+        $('.user').click(function(){
+            alert('修改个人信息');
+        });
+    });
+
+    function setWidth() {
+
+        var $winW = $(window).width(), $winH = $(window).height(), $sidebar = $(".sidebar"), top = 66;
+        var siderbarW = $winW > 1366 ? 296 : 200;
+        $(".sidebar").width(siderbarW);
+        $(".main").css("margin-left",siderbarW+"px");
+        $sidebar.height($winH - top);
+        if (!getIeVersion()) {
+            $(".main").height($winH - top);
+        } else {
+            $(".main").height($winH - top - 4);
+            $sidebar.height($winH - top - 4);
+        }
+    }
+    function getIeVersion(){
+        return parseFloat(navigator.appVersion.split("MSIE")[1]);
+    }
+    window.onresize=setWidth;
+
+
+
+
+</script>
+<script src="js/echars.js"></script>
+<script src="js/json.js"></script>
