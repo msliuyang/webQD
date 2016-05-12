@@ -1,0 +1,51 @@
+.table_info, .main, .title {
+	width: 100%;
+}
+
+.table_info {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	background-color: #f7f7f7;
+	padding: 15px;
+}
+
+.main {
+	margin-bottom: 15px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 3px 3px #ddd, inset 0 0 3px rgba(255, 255, 255, 0.5);
+	-moz-box-shadow: 0 3px 3px #ddd, inset 0 0 3px rgba(255, 255, 255, 0.5);
+	box-shadow: 0 3px 3px #ddd, inset 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.title {
+	height: 45px;
+	line-height: 45px;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: SimSun;
+	color: #fff;
+	text-align: center;
+	background-color: #1584dd;
+}
+
+.table_info thead {
+	background-color: #ebebeb;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: SimSun;
+	color: #000;
+	text-align: center;
+}
+.table_info th, .table_info td {
+	padding: 12px;
+	border: 2px solid #ddd;
+}
+.table_info td {
+	font-size: 16px;
+	font-family: SimSun;
+	color: #000;
+	text-align: center;
+}
