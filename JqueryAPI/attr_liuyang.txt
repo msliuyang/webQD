@@ -1,0 +1,82 @@
+html属性:html标签中自带属性或者自定义的属性
+1.html标签中自带属性
+	eg:<img/>标签,<img src='' alt=''/>这是我们最常见的写法,其中src,alt就是img标签的属性
+	jquery操作：$('img').attr('src');表示获取img标签src的属性值
+			$('img').attr('src','xxxx');表示给img标签src属性赋值
+			$('img').attr({ src: 'test.jpg', alt: 'Test Image' });一次性给多个属性赋值
+			$('img').removeAttr('src');移除img标签src的属性
+
+	注：1.6以下版本在IE6使用JQuery的removeAttr方法删除disabled是无效的。解决的方法就是使用$('XX').prop('disabled',false);1.7版本在IE6下已支持删除disabled。
+	javascript中使用getAttribute获取,setAttribute赋值	
+
+2.html标签自己添加的属性
+	eg:这里还是以<img/>标签为例,<img src='' alt='' size=''/>,这里size就是自定义的属性,
+	操作同上
+
+3.jquery：prop与attr区别
+	prop:只能操作html标签自带属性,如果是自定义属性则返回undefined
+	attr:可操作自定义属性,如果是html标签自带属性,但标签中未写出就进行操作,则返回undefined
+	eg:	<input id='chk1' type='checkbox' /> //标签中未写出checked属性
+		<input id='chk2' type='checkbox' checked='checked'  action='xxx'/>//自定义action属性
+
+		//prop
+		$('#chk1').prop('checked') == false 
+		$('#chk2').prop('checked') == true
+		$('#chk2').prop('action') == undefined//操作自定义属性
+
+		//attr
+		$('#chk1').attr('checked') == undefined //操作标签中未写出属性
+		$('#chk2').attr('checked') == true
+		$('#chk2').attr('action') == xxx
+
+		//removeProp移除
+		$('#chk2').removeProp('checked');
+
+4.jquery：添加、删除类样式：首先必须存在这个类样式
+	$('img').addClass('className className2');//addClass添加多个类样式
+	$('img').removeClass('className');//removeClass删除样式
+
+	//给每个里标签添加类样式
+	$('ul li').addClass(function() {
+  		return 'item-' + $(this).index();
+	});
+
+	//删除最后一个元素上与前面重复的class
+	$('li:last').removeClass(function() {
+	    return $(this).prev().attr('className');
+	});
+
+	//如果不存在则添加类，如果已设置则删除之（切换效果）
+	$('p').click(function(){
+	  	$('p').toggleClass('className');
+	});
+
+5.jquery：html()与text()：
+	eg:
+		<p>我是段落1：<a href="#">W3CPLUS</a></p> 
+
+		$(document).ready(function(){ 
+			 //输出：我是段落1：W3CPLUS
+			 alert($("p").text()); 
+
+			 //输出：我是段落1：<a href="#">W3CPLUS</a>
+			 alert($("div.demo p").html()); 
+		 });
+
+
+	注：取得第一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。
+	在一个 HTML 文档中, 我们可以使用 .html() 方法来获取任意一个元素的内容。 如果选择器匹配多于一个的元素，那么只有第一个匹配元素的 HTML 内容会被获取。
+
+6.jquery：val()
+	元素的值是通过 value 属性设置的。该方法大多用于 input 元素。
+	如果该方法未设置参数，则返回被选元素的当前值。
+
+	eg： <input type="text" name="fname" value="Bill" />
+		//取值
+		$('input').val();//输出Bill
+		//赋值
+		$('input').val('kiki');//此时input标签中value属性值为kiki
+	注：获得匹配元素的当前值。在 jQuery 1.2 中,可以返回任意元素的值了。
+	包括select。如果多选，将返回一个数组，其包含所选的值。
+	javascript中是value()
+

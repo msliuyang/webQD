@@ -1,0 +1,53 @@
+jquery：css()
+	eg：<div class="div"></div>
+	jquery添加css样式：$("div").css("color","red");
+				//逐渐增加div的大小
+				$("div").click(function() {
+					  $(this).css({
+						    width: function(index, value) {
+						      return parseFloat(value) * 1.2;
+						    }, 
+						    height: function(index, value) {
+						      return parseFloat(value) * 1.2;
+						    }
+					  });
+				});
+				//添加多个
+				$("div").css({ "color": "#ff0011", "background": "blue" });
+	注：添加多个css可使用addClass(),便于修改易维护
+
+jquery：offset()
+	获取匹配元素在当前视口的相对偏移。返回的对象包含两个整型属性：top 和 left，以像素计。此方法只对可见元素有效。
+
+	eg：$("div").offset({ top: 10, left: 30 });
+
+jquery：position()
+	获取匹配元素相对父元素的偏移。
+	返回的对象包含两个整型属性：top 和 left。为精确计算结果，请在补白、边框和填充属性上使用像素单位。此方法只对可见元素有效。
+
+	eg：$("div").position();
+		$("div").position().left;
+		$("div").position().top;
+
+jquery：scrollTop()
+	获取匹配元素相对滚动条顶部的偏移。
+	此方法对可见和隐藏元素均有效。
+
+	eg：$("div").scrollTop();	//获取
+		$("div").scrollTop(300);	//赋值
+
+jquery：height(),innerHeight(),outerHeight()
+	  width(),innerWidth(),outerWidth()
+
+	  //height()取得匹配元素当前计算的高度值
+	  $("div").height();	//获取
+	  $("div").height(300);	//赋值
+
+	  //innerHeight()：height + padding
+	  $("div").innerHeight();
+
+
+	  //outerHeight()：height + padding + border
+	  $("div").outerHeight();
+	  //设置为 true 时，计算边距在内。height+padding+border+margin
+	  $("div").outerHeight(true);
