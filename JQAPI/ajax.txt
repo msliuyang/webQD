@@ -1,0 +1,94 @@
+jquery：ajax()：
+	$.ajax({
+	     url: "jquery_ajax.php?page=1&id=3"
+	    , type: "POST"
+	    // jQuery会自动将对象数据转换为 "name=codeplayer&age=18&uid=1&uid=2&uid=3"
+	    , data: { name:"codeplayer", age:18, uid: [1, 2, 3] }
+	    // 请求成功时执行
+	    , success: function( data, textStatus, jqXHR ){
+	        alert("返回的数据" + data);
+	    }
+	    // 请求失败时执行
+	    , error: function(jqXHR, textStatus, errorMsg){
+	        // jqXHR 是经过jQuery封装的XMLHttpRequest对象
+	        // textStatus 可能为： null、"timeout"、"error"、"abort"或"parsererror"
+	        // errorMsg 可能为： "Not Found"、"Internal Server Error"等
+	        alert("请求失败：" + errorMsg);
+	    }
+	});
+
+jquery：get():
+	$.get("test.cgi", { name: "John", time: "2pm" },
+	          function(data){
+	          alert("Data Loaded: " + data);
+	});
+
+
+jquery：post():
+	$.post("test.php", { name: "John", time: "2pm" },
+	          function(data){
+	          alert("Data Loaded: " + data);
+	});
+
+jquery：getJSON():
+	$.getJSON("test.js", { name: "John", time: "2pm" }, function(json){
+	  	alert("JSON Data: " + json.users[3].name);
+	});
+
+jquery：getScript():
+	$.getScript("test.js", function(){
+	  	alert("Script loaded and executed.");
+	});
+
+	//AJAX 请求开始时显示信息
+	$("#txt").ajaxStart(function(){
+	  	$("#wait").css("display","block");
+	});
+
+	//AJAX 请求发送前显示信息
+	$("#msg").ajaxSend(function(evt, request, settings){
+	  	$(this).append("<li>开始请求: " + settings.url + "</li>");
+	});
+
+	//AJAX 请求完成时执行函数
+	$("#txt").ajaxComplete(function(){
+	  	$("#wait").css("display","none");
+	});
+
+	//AJAX 请求失败时显示信息
+	$("#msg").ajaxError(function(event,request, settings){
+	     	$(this).append("<li>出错页面:" + settings.url + "</li>");
+	});
+
+	//当 AJAX 请求成功后显示消息
+	$("#msg").ajaxSuccess(function(evt, request, settings){
+	  	$(this).append("<li>请求成功!</li>");
+	})
+	
+	//AJAX 请求结束后隐藏信息
+	$("#loading").ajaxStop(function(){
+	   	$(this).hide();
+	 });
+
+jquery： serialize()：用于序列化一组表单元素，将表单内容编码为用于提交的字符串
+
+		eg：<form name="myForm" action="http://www.365mini.com" method="post">
+			    <input name="uid" type="hidden" value="1" />
+			    <input name="username" type="text" value="张三" />
+			    <input name="password" type="text" value="123456" />
+			</form>
+
+		jquery：$("form").serialize();
+
+		结果：uid=1&username=%E5%BC%A0%E4%B8%89&password=123456
+
+		ps：以便通过AJAX方式提交
+
+jquery： serializeArray()：返回将表单元素编码后的JS数组
+
+		jquery：$("form").serializeArray();
+		结果：[
+			    { name: "uid", value: "1" },
+			    { name: "username", value: "张三" },
+			    { name: "password", value: "123456" }
+    			]

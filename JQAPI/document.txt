@@ -1,0 +1,164 @@
+jquery：append()：会将内容追加到指定容器元素的结束标记之前，不会额外添加任何空白字符
+		eg：<div class="div">
+    			<span>CodePlayer</span>    
+			</div>
+
+		jquery：$("div").append("<p>xxxxxxx</p>");
+
+		结果：<div class="div">
+	    			<span>CodePlayer</span>  
+	    			<p>xxxxxxx</p>  
+			</div>
+
+
+	prepend()：用于将每个匹配元素内部的起始位置追加内容
+
+		jquery：$("div").prepend("<p>xxxxxxx</p>");
+
+		结果：<div class="div">
+				<p>xxxxxxx</p>  
+	    			<span>CodePlayer</span>  
+			</div>
+
+
+	appendTo()：用于将所有匹配元素追加到指定元素内部的末尾位置追加内容
+		eg： <div></div><div></div>
+
+			//新建段落追加div中并加上一个class
+		jquery：$("<p/>")
+			   .appendTo("div")
+			   .addClass("test")
+			   .end()
+			   .addClass("test2");
+
+		结果：<div><p class="test test2"></p></div>
+			<div><p class="test"></p></div>
+
+	prependTo()：用于将所有匹配元素追加到指定元素内部的起始位置追加内容
+
+		jquery：$("<p/>")
+			   .appendTo("div")
+			   .addClass("test")
+			   .end()
+			   .addClass("test2");
+
+	after()：用于在每个匹配元素之后的位置插入内容
+
+		jquery：$("div").after("<p>xxxxxxx</p>");
+
+		结果：<div class="div">  
+	    			<span>CodePlayer</span>  
+			</div>
+			<p>xxxxxxx</p>
+
+	insertAfter()：用于将所有匹配元素插入到指定元素之后的位置
+
+		jquery：$("p").insertAfter($("div"));
+
+		结果：<div class="div">  
+	    			<span>CodePlayer</span>  
+			</div>
+			<p>xxxxxxx</p>
+
+	before()：用于在每个匹配元素之前的位置插入内容
+
+		jquery：$("p").before($("div"));
+
+		结果：<p>xxxxxxx</p>
+			<div class="div">  
+	    			<span>CodePlayer</span>  
+			</div>
+	
+	insertBefore()：用于将所有匹配元素插入到指定元素之前的位置
+
+		jquery：$("p").insertBefore($("div"));
+
+		结果：<p>xxxxxxx</p>
+			<div class="div">  
+	    			<span>CodePlayer</span>  
+			</div>
+
+	wrap()：用于在每个匹配元素之前的位置插入内容
+
+		jquery：$("div span").wrap(function(){
+				return '<div class="' + $(this).text() + '" />';
+			   });
+
+		结果：<div class="div"> 
+				<div class="CodePlayer"> 
+	    				<span>CodePlayer</span>
+	    			</div>  
+			</div>
+
+	unwrap()：用于移除每个匹配元素的父元素
+
+		jquery：$("div span").unwrap();
+
+		结果：<span>CodePlayer</span>
+
+	wrapAll()：用于将所有匹配元素用单个元素包裹起来
+
+		jquery：$("div span").wrapAll('<div></div>');
+
+		结果：<div class="div"> 
+				<div> 
+	    				<span>CodePlayer</span>
+	    			</div>  
+			</div>
+	    		
+	wrapInner()：用于在每个匹配元素的所有内容外部包裹指定的元素
+
+		jquery：$("div span").wrapInner(function() {
+  				return '<div class="' + $(this).text() + '" />';
+			   });
+
+		结果：<div class="div"> 
+	    			<div class="CodePlayer"> 
+	    				<span>CodePlayer</span>
+	    			</div>
+			</div>
+
+	replaceAll()：用于使用当前匹配元素替换掉所有的目标元素
+
+		jquery：$("<p/>").replaceAll($(".div span"));
+
+		结果：<div class="div"> 
+	    				<p></p>
+			</div>
+
+	replaceWith()：用于在每个匹配元素的所有内容外部包裹指定的元素
+
+		jquery：$(".div span").replaceAll("<p/>");
+
+		结果：<div class="div"> 
+	    				<p></p>
+			</div>
+
+	empty()：用于清空每个匹配元素内的所有内容
+
+		jquery：$(".div span").empty();
+
+		结果：<div class="div">
+				<span></span>
+			</div>
+
+	remove(),detach()：用于从文档中移除匹配的元素
+
+		jquery：$(".div span").remove();
+			  $(".div span").detach();
+
+		结果：<div class="div"></div>
+
+	clone()：用于克隆当前jQuery对象
+		
+		//一个布尔值（true 或者 false）指示事件处理函数是否会被复制。
+		jquery：$(".div span").click(function(){
+  				$(this).clone(true).insertAfter(this);
+			   });
+
+		结果：<div class="div">
+				<span>CodePlayer</span>
+				//true点击一次复制一个
+				<span>CodePlayer</span>
+				//false只能复制一个,并不能再点击
+			</div>
