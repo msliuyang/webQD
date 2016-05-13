@@ -212,7 +212,7 @@
 	position: absolute;
 	top: 22%;
 	/*padding: 0 5%;*/
-	height: 400px;
+	height: 60%;
 	line-height: 50px;
 	color: #370082;
 	/*font-size: 18px;*/
@@ -247,7 +247,7 @@
 	position: absolute;
 	top: 22%;  
 	opacity: 0.5;
-	height: 445px;
+	height: 65%;
 	padding: 10px;
 	z-index: 6;
 	border-radius: 5px;
@@ -272,7 +272,7 @@
 .content-3{
 	position: absolute;
 	width: 80%;
-	height: 445px;
+	height: 65%;
 	left:10%;
 	top: 22%;
 	z-index: 6;
@@ -282,6 +282,54 @@
 	box-shadow: 0 0 15px #fff;
       	opacity: 0.5;  
 }
+
+.skill { 
+	list-style:none; 
+	padding-top:30px;
+}
+
+.skill li { 
+	margin-bottom:70px; 
+	background:#fff; 
+	height:5px; 
+	border-radius:3px; 
+	border-left:1px solid #fff; 
+	border-top:1px solid #fff; 
+	border-right:1px solid #fff; 
+	border-bottom:1px solid #fff;  
+}
+
+.skill li em { 
+	position:relative; 
+	top:-30px;
+}
+
+.expand { 
+	height:1px; 
+	margin:2px 0; 
+	background:#2187e7; 
+	position:absolute;
+	box-shadow:0px 0px 10px 1px rgba(0,198,255,0.4);
+}
+
+.html5       { width:70%;  -moz-animation:html5 2s ease-out;       -webkit-animation:html5 2s ease-out;       }
+.css3        { width:90%;  -moz-animation:css3 2s ease-out;        -webkit-animation:css3 2s ease-out;        }
+.jquery      { width:50%;  -moz-animation:jquery 2s ease-out;      -webkit-animation:jquery 2s ease-out;      }
+.photoshop   { width:10%;  -moz-animation:photoshop 2s ease-out;   -webkit-animation:photoshop 2s ease-out;   }
+.dreamweaver { width:100%; -moz-animation:dreamweaver 2s ease-out; -webkit-animation:dreamweaver 2s ease-out; }
+
+@-moz-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+@-moz-keyframes css3        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-moz-keyframes jquery      { 0%  { width:0px;} 100%{ width:50%;}  }
+@-moz-keyframes photoshop   { 0%  { width:0px;} 100%{ width:10%;}  }
+@-moz-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:100%;} }
+
+@-webkit-keyframes html5       { 0%  { width:0px;} 100%{ width:70%;}  }
+@-webkit-keyframes css3        { 0%  { width:0px;} 100%{ width:90%;}  }
+@-webkit-keyframes jquery      { 0%  { width:0px;} 100%{ width:50%;}  }
+@-webkit-keyframes photoshop   { 0%  { width:0px;} 100%{ width:10%;}  }
+@-webkit-keyframes dreamweaver { 0%  { width:0px;} 100%{ width:100%;} }
+
 .content-3-1 ul{
 
 }
