@@ -36,7 +36,7 @@
 
 /* "Fix" for percentage rounding: add a background bar pseudo element with the same color like the labels */
 .st-container:before {
-	content: '友情链接：';
+	content: '';
 	position: fixed;
 	width: 100%;
 	height: 34px;
