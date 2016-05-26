@@ -1,0 +1,74 @@
+.red{color: red;}
+.modal.overlay{margin: 0; background: #000;filter: alpha(opacity=50);opacity: 0.5;display: block;top: 0px;left: 0px;width: 100%;height: 100%;z-index: 1000; position: absolute;}
+.modal.modal_box{ width: 540px; height:460px;position: absolute;z-index: 1001;left: 50%; margin-left: -270px; top: 10%;}
+.modal .modal_header{width: 540px; height: 49px; line-height: 49px; background: url(../img/log/title.png) no-repeat; text-align: center;}
+.modal .modal_header span.modal_title{color: #fff;font-size: 20px;font-family: '微软雅黑';}
+.modal .modal_header .modal_close{width: 30px;height:30px; position: absolute; top: -10px; right: -10px;  background: url(../img/log/close.png) no-repeat;}
+.modal .modal_body{ width: 517px;padding: 10px; height: 380px; background: #fff; overflow-y: auto;}
+.modal .modal_body dl{  margin: 0;font-family: '微软雅黑';}
+.modal .modal_body dt{font-size: 17px; line-height: 30px;}
+.modal .modal_body dd{font-size: 16px; line-height: 24px; padding-left: 0; margin-left:0; }
+.modal .modal_body dd span.red{ position: relative; top: 2px;}
+.modal .modal_body .modal_line{ width: 100%; border-top: 1px solid #ccc; margin-top: 15px;margin-bottom: 10px;}
+.modal .modal_bottom{width: 540px; height: 15px; background: url(../img/log/bottom.png) 0 -5px no-repeat;}
+ 
+ <script type="text/javascript">
+       $(function(){
+          $(".modal_close").click(function(event) {
+             $(".modal").hide();
+          });
+          $("button").click(function(event) {
+             $(".modal").show();
+          });
+          //遮罩
+          function resetModal(){
+             $(".overlay").width($(window).width()).height($(window).height());
+          }
+          resetModal();
+          $(window).resize(resetModal);
+       });
+    </script>
+</head>
+
+<body>
+<button>测试</button>
+
+<div class="modal overlay"></div><!-- 遮罩 -->
+<div class="modal modal_box">
+   <div class="modal_header">
+      <span class="modal_title">当前版本V1.0.0.4</span>
+      <div class="modal_close"></div>
+   </div>
+   <div class="modal_body">
+      <dl>
+         <dt>本次更新内容：</dt>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+      </dl>
+      <div class="modal_line"></div>
+      <dl>
+         <dt>本次更新内容：</dt>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+      </dl>
+      <div class="modal_line"></div>
+      <dl>
+         <dt>本次更新内容：</dt>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+      </dl>
+      <div class="modal_line"></div>
+      <dl>
+         <dt>本次更新内容：</dt>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+         <dd><span class="red">* </span>监控网页特定内容的更新，并做出提醒，自动解决方案。</dd>
+      </dl>
+   </div>
+   <div class="modal_bottom"></div>
+</div>
+
+</body>
