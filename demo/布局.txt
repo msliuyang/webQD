@@ -1,41 +1,41 @@
 
-1.Á½ÁÐ²¼¾Ö£¬×ó²à¿í¶È¹Ì¶¨£¬ÓÒ²à¿í¶È×ÔÊÊÓ¦
-1.1.×ó²à½øÐÐ¸¡¶¯£¬ÓÒ²àÉèÖÃmargin-left
-   /*1.ÀûÓÃ¸¡¶¯½øÐÐ²¼¾Ö*/    .left {        float: left;        width: 200px;        height: 200px;        background-color: cornflowerblue;    }   
+1.ä¸¤åˆ—å¸ƒå±€ï¼Œå·¦ä¾§å®½åº¦å›ºå®šï¼Œå³ä¾§å®½åº¦è‡ªé€‚åº”
+1.1.å·¦ä¾§è¿›è¡Œæµ®åŠ¨ï¼Œå³ä¾§è®¾ç½®margin-left
+   /*1.åˆ©ç”¨æµ®åŠ¨è¿›è¡Œå¸ƒå±€*/    .left {        float: left;        width: 200px;        height: 200px;        background-color: cornflowerblue;    }   
 .right {        margin-left: 200px;        height: 200px;        background-color: bisque;    }    
 <div class="left"></div>    
-<div class="right"></div>¡¡
+<div class="right"></div>ã€€
 
 
-   1.2.ÀûÓÃ¾ø¶Ô¶¨Î»À´´úÌæ¸¡¶¯/*    2.ÀûÓÃ¾ø¶Ô¶¨Î»½øÐÐ²¼¾Ö*/  
+   1.2.åˆ©ç”¨ç»å¯¹å®šä½æ¥ä»£æ›¿æµ®åŠ¨/*    2.åˆ©ç”¨ç»å¯¹å®šä½è¿›è¡Œå¸ƒå±€*/  
 .wrap {        position: relative;    }   
 .left {        position: absolute;        top: 0;        left: 0;        width: 200px;        height: 200px;        background-color: cornflowerblue;    }    
 .right {        margin-left: 200px;        height: 200px;        background-color: bisque;    }   
   <div class="wrap">        
     <div class="left"></div>        
     <div class="right"></div>   
-  </div>¡¡
+  </div>ã€€
 
 
 
 
 
-2.Á½ÁÐ²¼¾Ö£¬ÓÒ²à¿í¶È¹Ì¶¨£¬×ó²à¿í¶È×ÔÊÊÓ¦  
-2.1.ÀûÓÃ¸¡¶¯½øÐÐ²¼¾Ö/*    1.ÀûÓÃ¸¡¶¯½øÐÐ²¼¾Ö*/   
+2.ä¸¤åˆ—å¸ƒå±€ï¼Œå³ä¾§å®½åº¦å›ºå®šï¼Œå·¦ä¾§å®½åº¦è‡ªé€‚åº”  
+2.1.åˆ©ç”¨æµ®åŠ¨è¿›è¡Œå¸ƒå±€/*    1.åˆ©ç”¨æµ®åŠ¨è¿›è¡Œå¸ƒå±€*/   
 .left {        margin-right: 200px;        height: 200px;        background-color: cornflowerblue;    }   
 .right {        float: right;        width: 200px;        height: 200px;        background-color: bisque;    }    
 <div class="right"></div>    <div class="left"></div
 >
-×¢£ºrightÒªÐ´ÔÚleftµÄÇ°Ãæ£¬·ñÔò»á³öÏÖÈçÏÂÎÊÌâ¡£È»ºó°Ù¶ÈÁËÏÂ£¬ÖÕÓÚÕÒµ½ÁËÈçÏÂÒ»¶Î»°
-£¨Ê×ÏÈÒªÃ÷°×¸¡¶¯ÔªËØÖ»¶ÔºóÃæÔªËØÓÐÓ°Ïì£¬¸¡¶¯ÔªËØ±¾Éí²¢²»¸¡¶¯£¬Ö»ÊÇÍÑÀëÎÄµµÁ÷£¬ºóÃæµÄÔªËØ»áÉÏÒÆ¶øÕ¼¾Ý¸¡¶¯ÔªËØµÄÎ»ÖÃ¡£ËùÒÔ°´ÄãËµµÄ»°£¬¾ÍÒªÀûÓÃ¸º±ß¾à°Ñ¸¡¶¯ÔªËØÀ­¸ß²ÅÄÜÍê³É¡££©
+æ³¨ï¼šrightè¦å†™åœ¨leftçš„å‰é¢ï¼Œå¦åˆ™ä¼šå‡ºçŽ°å¦‚ä¸‹é—®é¢˜ã€‚ç„¶åŽç™¾åº¦äº†ä¸‹ï¼Œç»ˆäºŽæ‰¾åˆ°äº†å¦‚ä¸‹ä¸€æ®µè¯
+ï¼ˆé¦–å…ˆè¦æ˜Žç™½æµ®åŠ¨å…ƒç´ åªå¯¹åŽé¢å…ƒç´ æœ‰å½±å“ï¼Œæµ®åŠ¨å…ƒç´ æœ¬èº«å¹¶ä¸æµ®åŠ¨ï¼Œåªæ˜¯è„±ç¦»æ–‡æ¡£æµï¼ŒåŽé¢çš„å…ƒç´ ä¼šä¸Šç§»è€Œå æ®æµ®åŠ¨å…ƒç´ çš„ä½ç½®ã€‚æ‰€ä»¥æŒ‰ä½ è¯´çš„è¯ï¼Œå°±è¦åˆ©ç”¨è´Ÿè¾¹è·æŠŠæµ®åŠ¨å…ƒç´ æ‹‰é«˜æ‰èƒ½å®Œæˆã€‚ï¼‰
 
 
 
 
 
 
-2.2.ÀûÓÃ¾ø¶Ô¶¨Î»½øÐÐ²¼¾Ö/*    
-2.ÀûÓÃ¾ø¶Ô¶¨Î»½øÐÐ²¼¾Ö*/    
+2.2.åˆ©ç”¨ç»å¯¹å®šä½è¿›è¡Œå¸ƒå±€/*    
+2.åˆ©ç”¨ç»å¯¹å®šä½è¿›è¡Œå¸ƒå±€*/    
 .wrap {        position: relative;    }    
 .left {        margin-right: 200px;        height: 200px;        background-color: cornflowerblue;    }    
 .right {        position: absolute;        top: 0;        right: 0;        width: 200px;        height: 200px;        background-color: bisque;    }    
@@ -48,8 +48,8 @@
 
 
 
-3.ÈýÁÐ²¼¾Ö£¬ÖÐ¼ä¿í¶È¹Ì¶¨£¬Á½²à¿í¶È×ÔÊÊÓ¦/*    
-1.³£¹æÊµÏÖ·½Ê½*/   
+3.ä¸‰åˆ—å¸ƒå±€ï¼Œä¸­é—´å®½åº¦å›ºå®šï¼Œä¸¤ä¾§å®½åº¦è‡ªé€‚åº”/*    
+1.å¸¸è§„å®žçŽ°æ–¹å¼*/   
 .left,    .right {        width: 50%;        height: 200px;        background-color: cornflowerblue;    }   
 .left {        margin-left: -300px;        float: left;    }    .right {        margin-right: -300px;        float: right;    }    
 .center {        margin: 0 auto;        width: 600px;        height: 200px;        background-color: bisque;    }    
@@ -61,9 +61,9 @@
 
 
 
-4.ÈýÁÐ²¼¾Ö£¬ÖÐ¼ä¿í¶È×ÔÊÊÓ¦£¬Á½²à¿í¶È¹Ì¶¨
-4.1.ÀûÓÃ¸¡¶¯ÊµÏÖ/*    
-1.¸¡¶¯ÊµÏÖ·½Ê½*/        
+4.ä¸‰åˆ—å¸ƒå±€ï¼Œä¸­é—´å®½åº¦è‡ªé€‚åº”ï¼Œä¸¤ä¾§å®½åº¦å›ºå®š
+4.1.åˆ©ç”¨æµ®åŠ¨å®žçŽ°/*    
+1.æµ®åŠ¨å®žçŽ°æ–¹å¼*/        
 .left,        .right {            width: 300px;            height: 200px;            background-color: cornflowerblue;        }       
 .left {            float: left;        }       
 .right {            float: right;        }       
@@ -76,8 +76,8 @@
 
 
 
-4.2.ÀûÓÃ¾ø¶Ô¶¨Î»ÊµÏÖ/*    
-2.¾ø¶Ô¶¨Î»·½Ê½ÊµÏÖ*/        
+4.2.åˆ©ç”¨ç»å¯¹å®šä½å®žçŽ°/*    
+2.ç»å¯¹å®šä½æ–¹å¼å®žçŽ°*/        
 .left,        .right {            position: absolute;            top: 0;            width: 300px;            height: 200px;            background-color: cornflowerblue;        }       
 .left {            left: 0;        }       
 .right {            right: 0;        }       
@@ -90,53 +90,37 @@
 
 
 
-5.Á½ÁÐ£¬×óÓÒµÈ¸ßÏÔÊ¾ 
+5.ä¸¤åˆ—ï¼Œå·¦å³ç­‰é«˜æ˜¾ç¤º 
 .wrap {            overflow: hidden;        }        
 .left,        .right {            margin-bottom: -10000px;            padding-bottom: 10000px;        }       
 .left {            background-color: cornflowerblue;        }       
 .right {            float: right;            width: 400px;            background-color: bisque;        }        
 <div class="wrap">        
    <div class="right">            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>        
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>           
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>å®šwidthå±žæ€§ã€‚å¦å¤–æŒ‡å®šå…ƒç´ æ—¶å°½é‡ä½¿ç”¨emè€Œä¸æ˜¯pxåšå•ä½ã€‚</p>           
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>           
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>å®šwidthå±žæ€§ã€‚å¦å¤–æŒ‡å®šå…ƒç´ æ—¶å°½é‡ä½¿ç”¨emè€Œä¸æ˜¯pxåšå•ä½ã€‚</p>        
 </div>        
    <div class="left">            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p> 
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p> 
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>           
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>            
-         <p>10. ÊÇ·ñÍü¼ÇÁËÐ´DTD?</p>¶¨widthÊôÐÔ¡£ÁíÍâÖ¸¶¨ÔªËØÊ±¾¡Á¿Ê¹ÓÃem¶ø²»ÊÇpx×öµ¥Î»¡£</p>        
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>å®šwidthå±žæ€§ã€‚å¦å¤–æŒ‡å®šå…ƒç´ æ—¶å°½é‡ä½¿ç”¨emè€Œä¸æ˜¯pxåšå•ä½ã€‚</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>           
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>å®šwidthå±žæ€§ã€‚å¦å¤–æŒ‡å®šå…ƒç´ æ—¶å°½é‡ä½¿ç”¨emè€Œä¸æ˜¯pxåšå•ä½ã€‚</p> 
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>           
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
+         <p>10. æ˜¯å¦å¿˜è®°äº†å†™DTD?</p>            
      </div>    
 </div>
