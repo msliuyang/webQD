@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="jquery-1.11.3.min.js"/></script>
+        <style type="text/css">
+             .zm{width:1000px;overflow:hidden;text-align:right;margin:0 auto;}
+             img{width:500px;height:auto;}
+			 
+			 
+             .form{width:262px;margin:50px auto;position:relative;}
+             .form .text{width:200px;height:17px;outline:none;border:1px solid #999;}
+             .form .btn{width:50px;height:22px;background:#71ac59;color:#fff;border:none;border-radius:3px;outline:none;position:relative;top:-1px;}
+             .form .file{width:262px;height:21px;position:absolute;left:0;top:0;background: #666;
+                      filter:alpha(opacity=0);-moz-opacity:0;opacity:0; }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $(".file").change(function() {
+                   $("#text").val($(".file").val());
+           	  });
+            })	    
+          
+        </script>
+        
+    </head>
+
+    <body>
+       <div class="zm">
+          <marquee onmouseover=this.stop() onmouseout=this.start() scrollamount=30>
+            <img src="1.jpg"/>
+            <img src="2.jpg"/>
+            <img src="3.jpg"/>
+            <img src="4.jpg"/>
+            <img src="5.jpg"/>
+          </marquee>
+       </div>
+       <div class="form">  
+         <!-- onchange="document.getElementById('text').value=this.value"    -->
+          <input type="text" class="text" id="text"/>
+          <input type="button" class="btn" value="ä¯ÀÀ"/>
+       	  <input type="file" class="file" />
+       </div>
+    </body>
+</html>
