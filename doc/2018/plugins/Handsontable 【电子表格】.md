@@ -3,19 +3,19 @@
 >Handsontable是一个用JavaScript编写的电子表格组件，兼容所有现代浏览器和IE9+。
 >官网 <https://docs.handsontable.com>
 
-####Vue中使用
-######1.安装模块包
+#### Vue中使用
+###### 1.安装模块包
 >npm install handsontable --save
  npm install @handsontable/vue --save
 
-######2.引入
+###### 2.引入
 >import Vue from "vue"
  import HotTable from "@handsontable/vue"
-######3.汉化
+###### 3.汉化
 >import 'handsontable/languages/zh-CN';
 language: 'zh-CN'
 
-######4.基本用法
+###### 4.基本用法
 ```javascript
 <template>
   <div id="hot-preview" >
@@ -111,7 +111,7 @@ data: {
 }
 ```
 
-####插件方法
+#### 插件方法
 1. **afterChange** (changes: Array, source: String)：1个或多个单元格的值被改变后调用
     changes：是一个2维数组包含row，prop，oldVal，newVal4个属性。
     source：其值为一个字符串，值可以为：alter，empty，populateFromArray，loadData，autofill，paste
