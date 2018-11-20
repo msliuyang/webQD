@@ -62,10 +62,9 @@ language: 'zh-CN'
   }
 </style>
 ```
-显示结果
-![图例一](./img/yy_Handsontable.png)
 
-####常用配置
+
+#### 常用配置
 ```javascript
 data: {
   settings: {
