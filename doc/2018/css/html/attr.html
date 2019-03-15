@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>空元素添加默认值</title>
+  <style>
+    /* css reset */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1.429;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* 自定义样式 */
+    .title{
+      padding: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #3296fa;
+    }
+
+    .div1[contenteditable]:empty::before {
+      content: attr(placeholder);
+      color: #ccc ;
+      font-size: 16px;
+    }
+    .div3[contenteditable]:empty:not(:focus)::before {
+      content: attr(placeholder);
+      color: #ccc ;
+      font-size: 16px;
+    }
+ 
+    .link1:empty::before {
+      content: attr(href);
+      color: red;
+    }
+    .link2[href^="http"]:empty::before {
+      content: attr(href);
+      color: #0ad36f;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2 class="title">空元素添加默认值</h2>
+    <div class="div1" contenteditable="true" placeholder="这个div里面是空的时候显示的placeholder哟！"></div>
+    <div class="div2" contenteditable="true" placeholder="我没显示呢！">
+      这个div里面不是空的placeholder内容不会显示！
+    </div>
+    <div class="div3" contenteditable="true" placeholder="对第一个进行扩展哦！使用我可以解决textare有固定高度问题啦！"></div>
+  </section>
+
+  <section>
+    <h2 class="title">灵活运用哦！</h2>
+    <p><a class="link1" href="我是href我也可以显示啦！"></a></p>
+    <p><a class="link1" href="我不显示啦！">我有内容我的属性不会代替我显示啦！</a></p>
+    <p><a class="link2" href="http:看我灵活匹配"></a></p>
+  </section>
+</body>
+</html>

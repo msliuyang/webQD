@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>固定底部元素</title>
+
+  <style>
+    /* css reset */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1.429;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* 自定义样式 */
+    .title{
+      padding: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #3296fa;
+    }
+
+    .content {
+      padding-bottom: 60px;     /* 底部元素高度*/
+      display: flex;
+      flex-direction: column;   /* 配合display:flex 元素竖向排列  */
+    }
+
+    .main {
+      flex: 1 0 auto;
+      padding: 20px;
+      background: #f7f7f7;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-shrink: 0;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 -1px 5px #f7f7f7;
+    }
+
+    .footer .btn {
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      background: #3296fa;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="content">
+      <div class="main">
+        <h2 class="title">固定元素在底部</h2>
+        <p>主要内容区域主要内容区域主要内容
+          区域主要内容区域主要内容区域主要内
+          容区域主要内容区域主要内容区域主要
+          内容区域主要内容区域主要内容区域主
+          要内容区域主要内容区域主要内容区域
+          主要内容区域主要内容区域主要内容区
+          域主要内容区域主要内容区域主要内容
+          区域主要内容区域主要内容区域主要内
+          容区域主要内容区域主要内容区域主要
+          内容区域主要内容区域主要内容区域主
+          要内容区域主要内容区域主要内容区域
+          主要内容区域主要内容区域主要内容区
+          域主要内容区域主要内容区域主要内容
+          区域主要内容区域主主要内容区域主要内容区域主要内容
+          区域主要内容区域主要内容区域主要内
+          容区域主要内容区域主要内容区域主要
+          内容区域主要内容区域主要内容区域主
+          要内容区域主要内容区域主要内容区域
+          主要内容区域主要内容区域主要内容区
+          域主要内容区域主要内容区域主要内容
+          区域主要内容区域主要内容区域主要内
+          容区域主要内容区域主要内容区域主要
+          内容区域主要内容区域主要内容区域主
+          要内容区域主要内容区域主要内容区域
+          主要内容区域主要内容区域主要内容区
+          域主要内容区域主要内容区域主要内容
+          区域主要内容区域主</p>
+      </div>
+      <div class="footer">
+        <button class="btn">内容过多我会漂浮</button>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

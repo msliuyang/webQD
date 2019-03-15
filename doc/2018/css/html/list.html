@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>常用列表</title>
+
+  <style>
+    /* css reset */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1.429;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* 自定义样式 */
+    .title{
+      padding: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #3296fa;
+    }
+    .list .item{
+      display: none;
+      padding: 10px;
+      color: rgba(25, 31, 37, 0.82);
+    }
+    .list .item:not(:last-child) {  /* 不包含最后一个元素 */
+      border-bottom: 1px solid #eee;
+    }
+    .list .item:nth-child(-n+2) {   /* 只显示前两个li啦*/
+      display: block;
+    }
+    .list .item .remark{
+      display: flex;
+      justify-content: space-between;   /* 配合display:flex 元素两端对齐  */
+      align-items: center;  /* 配合display:flex 元素垂直居中  */
+      margin-top: 10px;
+      font-size: 14px;
+      color: rgba(25, 31, 37, 0.52);
+    }
+
+    .list .remark .text{
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h2 class="title">常见列表1：去掉最后一个元素的边框</h2>
+    <ul class="list">
+      <li class="item">关于印发《杭州市会展业发展扶持资金管理办法（试行）》的通知</li>
+      <li class="item">杭州市财政局关于进一步规范市级行政事业单位公款竞争性存放管理的通知</li>
+      <li class="item">关于杭州市消防支队特勤大队一中队家具采购项目的暂停公告</li>
+      <li class="item">杭州市财政局关于进一步规范市级行政事业单位公款竞争性存放管理的通知</li>
+      <li class="item">2018年第四批基建竣工财务决算委托审核中标单位公告</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="title">常见列表2：带有副标题</h2>
+    <ul class="list">
+      <li class="item">
+        <p>关于印发《杭州市会展业发展扶持资金管理办法（试行）》的通知</p>
+        <p class="remark">
+          <span class="text">局发文</span>
+          <span class="time">2019-03-02</span>
+        </p>
+      </li>
+      <li class="item">
+        <p>杭州市财政局关于进一步规范市级行政事业单位公款竞争性存放管理的通知</p>
+        <p class="remark">
+          <span class="text">局发文</span>
+          <span class="time">2019-03-02</span>
+        </p>
+      </li>
+      <li class="item">
+        <p>关于杭州市消防支队特勤大队一中队家具采购项目的暂停公告</p>
+        <p class="remark">
+          <span class="text">局发文</span>
+          <span class="time">2019-03-02</span>
+        </p>
+      </li>
+      <li class="item">
+        <p>杭州市财政局关于进一步规范市级行政事业单位公款竞争性存放管理的通知</p>
+        <p class="remark">
+          <span class="text">局发文</span>
+          <span class="time">2019-03-02</span>
+        </p>
+      </li>
+      <li class="item">
+        <p>2018年第四批基建竣工财务决算委托审核中标单位公告</p>
+        <p class="remark">
+          <span class="text">局发文</span>
+          <span class="time">2019-03-02</span>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+</body>
+</html>
